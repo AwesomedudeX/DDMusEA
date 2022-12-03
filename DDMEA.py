@@ -45,6 +45,8 @@ elif sect == "Products":
 
 elif sect == "Booking":
 
+	st.write("Note: Events can only be booked during the current year.")
+
 	t = st.selectbox("Type:", ["Party", "Wedding"])
 	
 	dl = [i for i in range(28)]
@@ -79,6 +81,7 @@ elif sect == "Booking":
 	else:
 		eapm = apm
 
+	st.write(f"Party time: {m} {d} ")
 	st.write(f"End time: {e}{eapm}")
 
 
