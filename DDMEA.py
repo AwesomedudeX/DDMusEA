@@ -59,7 +59,7 @@ elif sect == "Booking":
 		if int(dt.now().strftime("%Y")) % 4 == 0:
 			dl += [29]
 	else:
-		dl += [30, 31]
+		dl += [29, 30]
 
 
 	d = st.selectbox("Day:", dl)
