@@ -51,9 +51,9 @@ elif sect == "Booking":
 	
 	with st.form("Event Booking", clear_on_submit=True):
 
-		name = st.text_input(label="", placeholder="Full name")
-		email = st.text_input(label="", placeholder="Email (name@company.extension)")
-		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
+		name = st.text_input(label="", placeholder="Full Name - So I know what to call you")
+		email = st.text_input(label="", placeholder="Email (name@company.extension) - for contact information")
+		cn = st.text_input(label="", placeholder="Credit/Debit Card Number - for the payment")
 		pin = st.text_input(label="", placeholder="PIN (for confirmation - this will not be saved)")
 
 		t = st.selectbox("Type:", ["Party", "Wedding"])
