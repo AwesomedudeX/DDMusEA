@@ -35,17 +35,27 @@ elif sect == "Products":
 	if product == "+1 Speaker at Your Next Party" or product == "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Speaker.png")
+		st.text_input(label="", placeholder="Credit/Debit Card Number")
+		st.text_input(label="", placeholder="PIN")
+		st.text_input(label="", placeholder="Address")
+		if st.button("Order🗒"):
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 	elif product == "Disco Balls":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Disco_Ball.png")
+		st.text_input(label="", placeholder="Credit/Debit Card Number")
+		st.text_input(label="", placeholder="PIN")
+		st.text_input(label="", placeholder="Address")
+		if st.button("Order🗒"):
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 	elif product == "Dave’s DJ SoundBoard: ElectroWorld X Series 9":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Soundboard.png")
-		st.text_input("")
+		st.text_input(label="", placeholder="Credit/Debit Card Number")
+		st.text_input(label="", placeholder="PIN")
+		st.text_input(label="", placeholder="Address")
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 
