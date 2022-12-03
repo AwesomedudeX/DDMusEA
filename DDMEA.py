@@ -8,6 +8,7 @@ if sect == "Homepage":
 	st.header("-"*61)
 	st.write("Our party services include: smoke machines, multiple options of lighting such as par lights or strip lights, disco balls and rentable limosines for the party. We bring 4 LyxPro SPA-10 10\" Portable Professional PA Speakers with us for the best sound quality. Disco Dave also is well-versed in DiscoCity Pro’s many advanced features, and he uses that with the ElectroWorld X Series 9 DJ board to make every night one you won’t forget.")
 	st.write("Use the search box in the sidebar on the left to navigate the site.")
+	st.write("🗒️")
 
 elif sect == "Products":
 
