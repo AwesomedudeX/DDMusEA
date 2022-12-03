@@ -8,7 +8,6 @@ if sect == "Homepage":
 	st.header("-"*61)
 	st.write("Our party services include: smoke machines, multiple options of lighting such as par lights or strip lights, disco balls and rentable limosines for the party. We bring 4 LyxPro SPA-10 10\" Portable Professional PA Speakers with us for the best sound quality. Disco Dave also is well-versed in DiscoCity Pro’s many advanced features, and he uses that with the ElectroWorld X Series 9 DJ board to make every night one you won’t forget.")
 	st.write("Use the search box in the sidebar on the left to navigate the site.")
-	st.write("🗒️")
 
 elif sect == "Products":
 
@@ -21,8 +20,11 @@ elif sect == "Products":
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Dance Floor: $30</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">+1 Speaker: $60</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Limousine rentals: $1500</h4>', unsafe_allow_html=True)
-	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">DiscoCity Software: DDMEA Promo Code</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Dave’s DJ SoundBoard: ElectroWorld X Series 9: $1000</h4>', unsafe_allow_html=True)
+	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">DiscoCity Software: Use Promo Code \'DDMEA\' for a free trial month and a 50% discount on monthly payments for a year</h4>', unsafe_allow_html=True)
+
+	if st.button("Order🗒"):
+		st.selectbox("Choose your product:", ["Karaoke Microphones", "Disco Balls", "Spotlights", "Cost for One Hour For Parties", "Cost For One Hour for Weddings", "Dance Floor", "+1 Speaker", "Limousine rentals", "DiscoCity Software", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"])
 
 elif sect == "About":
 
