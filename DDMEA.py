@@ -52,11 +52,12 @@ elif sect == "Booking":
 	dl = [i for i in range(1, 29)]
 	
 	m = st.selectbox("Month:", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
-	
+	y = int(dt.now().strftime("%Y"))
+
 	if m in ["January", "March", "May", "July", "September", "November", "December"]:
 		dl += [29, 30, 31]
 	elif m == "February":
-		if int(dt.now().strftime("%Y")) % 4 == 0:
+		if y % 4 == 0:
 			dl += [29]
 	else:
 		dl += [29, 30]
@@ -93,7 +94,7 @@ elif sect == "Booking":
 	else:
 		eapm = apm
 
-	st.write(f"Party time: {m} {d}, {dt.now().strftime("%Y")} - from {s}{apm} to {e}{eapm} (MST)")
+	st.write(f"Party time: {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
 
 
 	if t == "Party":
