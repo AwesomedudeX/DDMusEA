@@ -49,7 +49,7 @@ elif sect == "Booking":
 
 	st.markdown(f'<h3 style="color:\'FF0000\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
 
-	with st.form("Event Booking"):
+	with st.form("Event Booking", clear_on_submit=True):
 
 		name = st.text_input(label="", placeholder="Full name")
 		email = st.text_input(label="", placeholder="Email (name@company.extension)")
@@ -113,10 +113,10 @@ elif sect == "Booking":
 			elif t == "Wedding":
 				st.write(f"Wedding cost: ${150*dur}")
 
-			st.form_submit_button("Book Event")
+			submit = st.form_submit_button("Book Event")
 
-			#if submit:
-				#st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
+			if submit:
+				st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
 
 elif sect == "About":
 
