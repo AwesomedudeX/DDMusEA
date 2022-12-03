@@ -49,7 +49,7 @@ elif sect == "Booking":
 
 	t = st.selectbox("Type:", ["Party", "Wedding"])
 	
-	dl = [i for i in range(28)]
+	dl = [i for i in range(1, 29)]
 	
 	m = st.selectbox("Month:", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
 	d = st.selectbox("Day:", dl)
@@ -81,8 +81,7 @@ elif sect == "Booking":
 	else:
 		eapm = apm
 
-	st.write(f"Party time: {m} {d} ")
-	st.write(f"End time: {e}{eapm}")
+	st.write(f"Party time: {m} {d} from {s}{apm} to {e}{eapm}")
 
 
 	if t == "Party":
