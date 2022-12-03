@@ -17,7 +17,7 @@ if sect == "Homepage":
 
 elif sect == "Products":
 
-	st.markdown(f'<h1 style="color:#FF0000;font-size:40px;">Products:</h1>', unsafe_allow_html=True)
+	st.markdown(f'<h1 style="color:#FF0000;font-size:40px;">Product:</h1>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Karaoke Microphones: $20</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Disco Balls: $30</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Spotlights: $160</h4>', unsafe_allow_html=True)
