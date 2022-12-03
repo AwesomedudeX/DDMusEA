@@ -49,7 +49,7 @@ elif sect == "Booking":
 
 	st.markdown(f'<h3 style="color:\'FF0000\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
 
-	with st.form("Event Booking")
+	with st.form("Event Booking"):
 
 		name = st.text_input(placeholder="Full name")
 		email = st.text_input(placeholder="Email (name@company.extension)")
