@@ -110,10 +110,10 @@ elif sect == "Booking":
 		elif t == "Wedding":
 			st.write(f"Wedding cost: ${150*dur}")
 
-	submit = st.form_submit_button("Book Event")
+		submit = st.form_submit_button("Book Event")
 
-	if submit:
-		st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
+		if submit:
+			st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
 
 elif sect == "About":
 
