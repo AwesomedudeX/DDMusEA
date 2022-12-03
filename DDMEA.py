@@ -51,10 +51,10 @@ elif sect == "Booking":
 
 	with st.form("Event Booking"):
 
-		name = st.text_input(placeholder="Full name")
-		email = st.text_input(placeholder="Email (name@company.extension)")
-		cn = st.text_input(placeholder="Credit/Debit Card Number")
-		pin = st.text_input(placeholder="PIN (for confirmation - this will not be sent to the service provider)")
+		name = st.text_input(label="", placeholder="Full name")
+		email = st.text_input(label="", placeholder="Email (name@company.extension)")
+		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
+		pin = st.text_input(label="", placeholder="PIN (for confirmation - this will not be sent to the service provider)")
 
 
 		if name != "" and email != "" and cn != "" and pin != "":
