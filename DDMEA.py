@@ -93,7 +93,7 @@ elif sect == "Booking":
 	else:
 		eapm = apm
 
-	st.write(f"Party time: {m} {d}, from {s}{apm} to {e}{eapm} (MST)")
+	st.write(f"Party time: {m} {d}, {dt.now().strftime("%Y")} - from {s}{apm} to {e}{eapm} (MST)")
 
 
 	if t == "Party":
