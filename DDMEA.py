@@ -24,12 +24,11 @@ elif sect == "Products":
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">DiscoCity Software: Use Promo Code \'DDMEA\' for a free trial month and a 50% discount on monthly payments for a year</h4>', unsafe_allow_html=True)
 
 	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "Cost for One Hour For Parties", "Cost For One Hour for Weddings", "Dance Floor", "+1 Speaker", "Limousine rentals", "DiscoCity Software", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
+	product = st.selectbox("Choose your product:", products)
 
 	if st.button("Order🗒"):
 
-		product = st.selectbox("Choose your product:", products)
-		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h4>', unsafe_allow_html=True)
-
+		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 
 elif sect == "About":
 
