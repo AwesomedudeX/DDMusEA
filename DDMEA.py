@@ -39,7 +39,6 @@ elif sect == "Products":
 		st.text_input(label="", placeholder="PIN")
 		st.text_input(label="", placeholder="Address")
 		if st.button("Order🗒"):
-		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 	elif product == "Disco Balls":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
@@ -47,7 +46,6 @@ elif sect == "Products":
 		st.text_input(label="", placeholder="Credit/Debit Card Number")
 		st.text_input(label="", placeholder="PIN")
 		st.text_input(label="", placeholder="Address")
-		if st.button("Order🗒"):
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 	elif product == "Dave’s DJ SoundBoard: ElectroWorld X Series 9":
