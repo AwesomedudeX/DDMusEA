@@ -49,8 +49,8 @@ elif sect == "Booking":
 	
 	dl = [i for i in range(28)]
 	
-	m = st.selectbox("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
-	d = st.selectbox(dl)
+	m = st.selectbox("Month:", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
+	d = st.selectbox("Day:", dl)
 
 	s = st.selectbox("Start time:", ["7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"])
 	e = st.selectbox("End time:", ["8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM", "12AM"])
