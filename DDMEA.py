@@ -29,7 +29,7 @@ elif sect == "Products":
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Dave’s DJ SoundBoard: ElectroWorld X Series 9: $1000</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">DiscoCity Software: Use Promo Code \'DDMEA\' for a free trial month and a 50% discount on monthly payments for a year</h4>', unsafe_allow_html=True)
 
-	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "Cost for One Hour For Parties", "Cost For One Hour for Weddings", "Dance Floor", "+1 Speaker at Your Next Party", "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)", "Limosine rentals", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
+	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "+1 Speaker at Your Next Party", "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)", "Limosine rentals", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
 	product = st.selectbox("Choose your product:", products)
 
 	if product == "+1 Speaker at Your Next Party" or product == "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)":
@@ -52,8 +52,38 @@ elif sect == "Booking":
 	m = st.selectbox("Month:", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
 	d = st.selectbox("Day:", dl)
 
-	s = st.selectbox("Start time:", ["7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"])
-	e = st.selectbox("End time:", ["8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM", "12AM"])
+	apm = st.selectbox("Time Period:", ["AM", "PM"])
+	dur = st.selectbox("Party Duration (Hours):", [1, 2, 3])
+
+	if apm == "AM":
+		if dur == 1:
+			s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+		if dur == 2:
+			s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+		if dur == 3:
+			s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+	
+	elif apm == "PM":
+		if dur == 1:
+			s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])	
+		if dur == 2:
+			s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])	
+		if dur == 3:
+			s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9])	
+
+	e = s+dur
+
+	if e > 12 and apm == "AM":
+		e = e-12
+		eapm = "PM"
+
+	st.write(f"End time: {e}{eapm}")
+
+
+	if t == "Party":
+		st.write(f"Party cost: ${120*dur}")
+	elif t == "Wedding":
+		st.write(f"Wedding cost: ${150*dur}")
 
 	if st.button("Book Event"):
 		st.write(f"{t} booked successfully!")
