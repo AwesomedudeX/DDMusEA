@@ -92,7 +92,7 @@ elif sect == "Booking":
 		st.write(f"Wedding cost: ${150*dur}")
 
 	if st.button("Book Event"):
-		st.write(f"{t} booked successfully!")
+		st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
 
 elif sect == "About":
 
