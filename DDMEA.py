@@ -47,63 +47,72 @@ elif sect == "Booking":
 
 	st.write("Note: Events can only be booked during the current year.")
 
-	t = st.selectbox("Type:", ["Party", "Wedding"])
-	
-	dl = [i for i in range(1, 29)]
-	
-	m = st.selectbox("Month:", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
-	y = int(dt.now().strftime("%Y"))
+	st.markdown(f'<h3 style="color:\'FF0000\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
 
-	if m in ["January", "March", "May", "July", "September", "November", "December"]:
-		dl += [29, 30, 31]
-	elif m == "February":
-		if y % 4 == 0:
-			dl += [29]
-	else:
-		dl += [29, 30]
+	name = st.text_input(placeholder="Full name")
+	email = st.text_input(placeholder="Email (name@company.extension)")
+	cn = st.text_input(placeholder="Credit/Debit Card Number")
+	pin = st.text_input(placeholder="PIN (for confirmation - this will not be sent to the service provider)")
 
+	if name != "" and email != "" and cn != "" and pin != "":
 
-	d = st.selectbox("Day:", dl)
+		t = st.selectbox("Type:", ["Party", "Wedding"])
+		
+		dl = [i for i in range(1, 29)]
+		
+		m = st.selectbox("Month:", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
+		y = int(dt.now().strftime("%Y"))
 
-	apm = st.selectbox("Time Period:", ["AM", "PM"])
-	dur = st.selectbox("Party Duration (Hours):", [1, 2, 3])
-
-	if apm == "AM":
-		if dur == 1:
-			s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
-		if dur == 2:
-			s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
-		if dur == 3:
-			s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
-	
-	elif apm == "PM":
-		if dur == 1:
-			s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])	
-		if dur == 2:
-			s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])	
-		if dur == 3:
-			s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9])	
-
-	e = s+dur
-
-	if e > 11 and apm == "PM":
-		eapm = "AM"
-	elif e > 12 and apm == "AM":
-		e -= 12
-		eapm = "PM"
-	else:
-		eapm = apm
-
-	st.write(f"Party time: {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
+		if m in ["January", "March", "May", "July", "September", "November", "December"]:
+			dl += [29, 30, 31]
+		elif m == "February":
+			if y % 4 == 0:
+				dl += [29]
+		else:
+			dl += [29, 30]
 
 
-	if t == "Party":
-		st.write(f"Party cost: ${120*dur}")
-	elif t == "Wedding":
-		st.write(f"Wedding cost: ${150*dur}")
+		d = st.selectbox("Day:", dl)
 
-	if st.button("Book Event"):
-		st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
+		apm = st.selectbox("Time Period:", ["AM", "PM"])
+		dur = st.selectbox("Party Duration (Hours):", [1, 2, 3])
+
+		if apm == "AM":
+			if dur == 1:
+				s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+			if dur == 2:
+				s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+			if dur == 3:
+				s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+		
+		elif apm == "PM":
+			if dur == 1:
+				s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])	
+			if dur == 2:
+				s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])	
+			if dur == 3:
+				s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9])	
+
+		e = s+dur
+
+		if e > 11 and apm == "PM":
+			eapm = "AM"
+		elif e > 12 and apm == "AM":
+			e -= 12
+			eapm = "PM"
+		else:
+			eapm = apm
+
+		st.write(f"Party time: {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
+
+
+		if t == "Party":
+			st.write(f"Party cost: ${120*dur}")
+		elif t == "Wedding":
+			st.write(f"Wedding cost: ${150*dur}")
+
+		if st.button("Book Event"):
+			st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
 
 elif sect == "About":
 
