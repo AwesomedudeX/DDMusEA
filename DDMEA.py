@@ -128,7 +128,7 @@ elif sect == "Booking":
 		submit = st.form_submit_button("Book Event")
 
 		if submit:
-			st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
+			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{t} booked successfully!</h3>', unsafe_allow_html=True)
 
 elif sect == "About":
 
