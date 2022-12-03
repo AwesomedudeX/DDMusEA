@@ -1,11 +1,11 @@
 import streamlit as st
+from datetime import datetime as dt
 
-sect = st.sidebar.selectbox("Navigate:", ["Homepage", "Products", "About"])
+sect = st.sidebar.selectbox("Navigate:", ["Homepage", "Products", "Booking", "About"])
 
 if sect == "Homepage":
 	st.markdown(f'<h1 style="color:#FF0000;font-size:40px;">Disco Dave\'s MusEA</h1>', unsafe_allow_html=True)
 	st.markdown(f'<h2 style="color:#0066FF;font-size:25px;">"Your one-way ticket to the virtual music world!"</h2>', unsafe_allow_html=True)
-	st.write()
 	st.write("Disco Dave’s MusEA is a service that provides YOU the best possible DJ service at parties, social gatherings, ceremonies, and clubs, all for a great price!")
 	st.write("Our party services include: smoke machines, multiple options of lighting such as par lights or strip lights, disco balls and rentable limosines for the party. We bring 4 LyxPro SPA-10 10\" Portable Professional PA Speakers with us for the best sound quality. Disco Dave also is well-versed in DiscoCity Pro’s many advanced features, and he uses that with the ElectroWorld X Series 9 DJ board to make every night one you won’t forget.")
 	st.header("-"*61)
@@ -24,13 +24,12 @@ elif sect == "Products":
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Spotlights: $160</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Cost for One Hour For Parties: $120</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Cost For One Hour for Weddings: $150</h4>', unsafe_allow_html=True)
-	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Dance Floor: $30</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">+1 Speaker: $60</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Limousine rentals: $1500</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Dave’s DJ SoundBoard: ElectroWorld X Series 9: $1000</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">DiscoCity Software: Use Promo Code \'DDMEA\' for a free trial month and a 50% discount on monthly payments for a year</h4>', unsafe_allow_html=True)
 
-	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "Cost for One Hour For Parties", "Cost For One Hour for Weddings", "Dance Floor", "+1 Speaker at Your Next Party", "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)", "Limosine rentals", "DiscoCity Software", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
+	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "Cost for One Hour For Parties", "Cost For One Hour for Weddings", "Dance Floor", "+1 Speaker at Your Next Party", "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)", "Limosine rentals", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
 	product = st.selectbox("Choose your product:", products)
 
 	if product == "+1 Speaker at Your Next Party" or product == "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)":
@@ -43,6 +42,21 @@ elif sect == "Products":
 		st.image("Disco_Ball.png")
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+
+elif sect == "Booking":
+
+	t = st.selectbox("Type:", ["Party", "Wedding"])
+	
+	dl = [i for i in range(28)]
+	
+	m = st.selectbox("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+	d = st.selectbox(dl)
+
+	s = st.selectbox("Start time:", ["7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"])
+	e = st.selectbox("End time:", ["8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM", "12AM"])
+
+	if st.button("Book Event"):
+		st.write(f"{t} booked successfully!")
 
 elif sect == "About":
 
