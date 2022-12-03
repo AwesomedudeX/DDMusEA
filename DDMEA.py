@@ -76,6 +76,8 @@ elif sect == "Booking":
 	if e > 12 and apm == "AM":
 		e = e-12
 		eapm = "PM"
+	else:
+		eapm = apm
 
 	st.write(f"End time: {e}{eapm}")
 
