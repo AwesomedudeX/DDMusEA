@@ -54,7 +54,7 @@ elif sect == "Booking":
 		name = st.text_input(label="", placeholder="Full name")
 		email = st.text_input(label="", placeholder="Email (name@company.extension)")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
-		pin = st.text_input(label="", placeholder="PIN (for confirmation - this will not be sent to the service provider)")
+		pin = st.text_input(label="", placeholder="PIN (for confirmation - this will not be saved)")
 
 
 		if name != "" and email != "" and cn != "" and pin != "":
@@ -114,7 +114,7 @@ elif sect == "Booking":
 			elif t == "Wedding":
 				st.write(f"Wedding cost: ${150*dur}")
 
-			if st.button("Book Event"):
+			if st.form_submit_button("Book Event"):
 				st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
 
 elif sect == "About":
