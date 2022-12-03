@@ -42,6 +42,12 @@ elif sect == "Products":
 		st.image("Disco_Ball.png")
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+	elif product == "Dave’s DJ SoundBoard: ElectroWorld X Series 9":
+		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
+		st.image("Soundboard.png")
+		st.text_input("")
+		if st.button("Order🗒"):
+			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 
 elif sect == "Booking":
 
@@ -55,6 +61,7 @@ elif sect == "Booking":
 		email = st.text_input(label="", placeholder="Email (name@company.extension) - for contact information")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number - for the payment")
 		pin = st.text_input(label="", placeholder="PIN - for confirmation (this won't be saved)")
+		loc = st.text_input(label="", placeholder="Address - so I know where to be")
 
 		t = st.selectbox("Type:", ["Party", "Wedding"])
 		
@@ -103,7 +110,7 @@ elif sect == "Booking":
 		else:
 			eapm = apm
 
-		st.write(f"Party time: {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
+		st.write(f"{loc} on {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
 
 		if t == "Party":
 			st.write(f"Party cost: ${120*dur}")
