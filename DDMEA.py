@@ -4,6 +4,7 @@ sect = st.sidebar.selectbox("Navigate:", ["Homepage", "Products", "About"])
 
 if sect == "Homepage":
 	st.markdown(f'<h1 style="color:#FF0000;font-size:40px;">Disco Dave\'s MusEA</h1>', unsafe_allow_html=True)
+	st.image("Logo.png")
 	st.write("Disco Dave’s MusEA is a service that provides YOU the best possible DJ service at parties, social gatherings, ceremonies, and clubs, all for a great price!")
 	st.write("Our party services include: smoke machines, multiple options of lighting such as par lights or strip lights, disco balls and rentable limosines for the party. We bring 4 LyxPro SPA-10 10\" Portable Professional PA Speakers with us for the best sound quality. Disco Dave also is well-versed in DiscoCity Pro’s many advanced features, and he uses that with the ElectroWorld X Series 9 DJ board to make every night one you won’t forget.")
 	st.header("-"*61)
