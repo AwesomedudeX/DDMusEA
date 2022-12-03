@@ -110,7 +110,7 @@ elif sect == "Booking":
 		else:
 			eapm = apm
 
-		st.write(f"{loc} on {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
+		st.write(f"{t} time: {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
 
 		if t == "Party":
 			st.write(f"Party cost: ${120*dur}")
