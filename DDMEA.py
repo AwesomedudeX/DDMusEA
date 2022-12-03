@@ -48,7 +48,7 @@ elif sect == "Booking":
 	st.write("Note: Events can only be booked during the current year.")
 
 	st.markdown(f'<h3 style="color:\'FF0000\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
-
+	
 	with st.form("Event Booking", clear_on_submit=True):
 
 		name = st.text_input(label="", placeholder="Full name")
@@ -56,67 +56,64 @@ elif sect == "Booking":
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
 		pin = st.text_input(label="", placeholder="PIN (for confirmation - this will not be saved)")
 
+		t = st.selectbox("Type:", ["Party", "Wedding"])
+		
+		dl = [i for i in range(1, 29)]
+		
+		m = st.selectbox("Month:", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
+		y = int(dt.now().strftime("%Y"))
 
-		if name != "" and email != "" and cn != "" and pin != "":
-
-			t = st.selectbox("Type:", ["Party", "Wedding"])
-			
-			dl = [i for i in range(1, 29)]
-			
-			m = st.selectbox("Month:", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
-			y = int(dt.now().strftime("%Y"))
-
-			if m in ["January", "March", "May", "July", "September", "November", "December"]:
-				dl += [29, 30, 31]
-			elif m == "February":
-				if y % 4 == 0:
-					dl += [29]
-			else:
-				dl += [29, 30]
+		if m in ["January", "March", "May", "July", "September", "November", "December"]:
+			dl += [29, 30, 31]
+		elif m == "February":
+			if y % 4 == 0:
+				dl += [29]
+		else:
+			dl += [29, 30]
 
 
-			d = st.selectbox("Day:", dl)
+		d = st.selectbox("Day:", dl)
 
-			apm = st.selectbox("Time Period:", ["AM", "PM"])
-			dur = st.selectbox("Party Duration (Hours):", [1, 2, 3])
+		apm = st.selectbox("Time Period:", ["AM", "PM"])
+		dur = st.selectbox("Party Duration (Hours):", [1, 2, 3])
 
-			if apm == "AM":
-				if dur == 1:
-					s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
-				if dur == 2:
-					s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
-				if dur == 3:
-					s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
-			
-			elif apm == "PM":
-				if dur == 1:
-					s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])	
-				if dur == 2:
-					s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])	
-				if dur == 3:
-					s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9])	
+		if apm == "AM":
+			if dur == 1:
+				s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+			if dur == 2:
+				s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+			if dur == 3:
+				s = st.selectbox("Start time:", [7, 8, 9, 10, 11])
+		
+		elif apm == "PM":
+			if dur == 1:
+				s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])	
+			if dur == 2:
+				s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])	
+			if dur == 3:
+				s = st.selectbox("Start time:", [12, 1, 2, 3, 4, 5, 6, 7, 8, 9])	
 
-			e = s+dur
+		e = s+dur
 
-			if e > 11 and apm == "PM":
-				eapm = "AM"
-			elif e > 12 and apm == "AM":
-				e -= 12
-				eapm = "PM"
-			else:
-				eapm = apm
+		if e > 11 and apm == "PM":
+			eapm = "AM"
+		elif e > 12 and apm == "AM":
+			e -= 12
+			eapm = "PM"
+		else:
+			eapm = apm
 
-			st.write(f"Party time: {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
+		st.write(f"Party time: {m} {d}, {y} - from {s}{apm} to {e}{eapm} (MST)")
 
-			if t == "Party":
-				st.write(f"Party cost: ${120*dur}")
-			elif t == "Wedding":
-				st.write(f"Wedding cost: ${150*dur}")
+		if t == "Party":
+			st.write(f"Party cost: ${120*dur}")
+		elif t == "Wedding":
+			st.write(f"Wedding cost: ${150*dur}")
 
-		submit = st.form_submit_button("Book Event")
+	submit = st.form_submit_button("Book Event")
 
-		if submit:
-			st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
+	if submit:
+		st.write(f"{t} booked successfully!\n\n(Reselect this section in the navigation box to book another event)")
 
 elif sect == "About":
 
