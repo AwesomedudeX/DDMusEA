@@ -77,6 +77,7 @@ elif sect == "Booking":
 
 	if e > 12 and apm == "PM":
 		e -= 12
+		eapm = apm
 	elif e > 12 and apm == "AM":
 		e -= 12
 		eapm = "PM"
