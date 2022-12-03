@@ -28,7 +28,7 @@ elif sect == "Products":
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Dave’s DJ SoundBoard: ElectroWorld X Series 9: $1000</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">DiscoCity Software: Use Promo Code \'DDMEA\' for a free trial month and a 50% discount on monthly payments for a year</h4>', unsafe_allow_html=True)
 
-	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "Cost for One Hour For Parties", "Cost For One Hour for Weddings", "Dance Floor", "+1 Speaker at Your Next Party", "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)", "Limousine rentals", "DiscoCity Software", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
+	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "Cost for One Hour For Parties", "Cost For One Hour for Weddings", "Dance Floor", "+1 Speaker at Your Next Party", "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)", "Limosine rentals", "DiscoCity Software", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
 	product = st.selectbox("Choose your product:", products)
 
 	if product == "+1 Speaker at Your Next Party" or product == "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)":
@@ -41,7 +41,6 @@ elif sect == "Products":
 		st.image("Disco_Ball.png")
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
-
 
 elif sect == "About":
 
