@@ -13,7 +13,6 @@ if sect == "Homepage":
 	st.write("\"Glad to partner up! Was a great investment on our end\" - Gameloft")
 	st.header("__")
 	st.write("Use the search box in the sidebar on the left to navigate the site.")
-	st.header("__")
 	st.image("Logo.PNG")
 
 elif sect == "Products":
