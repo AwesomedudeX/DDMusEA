@@ -75,7 +75,7 @@ elif sect == "Booking":
 		pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
 		loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
 	except:
-		st.markdown(f'<p style="color:\'FF0000\';font-size:20px;">Invalid card number</p>', unsafe_allow_html=True)
+		st.markdown(f'<p style="color:\'FF0000\';font-size:15px;">Invalid card number</p>', unsafe_allow_html=True)
 
 	if name != "" and email != "" and cn != "" and pin != "" and loc != "":
 
