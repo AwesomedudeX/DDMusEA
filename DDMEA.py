@@ -65,9 +65,17 @@ elif sect == "Booking":
 
 	name = st.text_input(label="What's your name?", placeholder="Full Name - So I know what to call you")
 	email = st.text_input(label="What's your email?", placeholder="Email (name@company.extension) - for contact information")
-	cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
-	pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
-	loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
+	
+	if "@" not in email:
+		st.markdown(f'<p style="color:\'FF0000\';font-size:20px;">Invalid email address</p>', unsafe_allow_html=True)
+	else:
+		cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
+	try:
+		cn = int(cn)
+		pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
+		loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
+	except:
+		st.markdown(f'<p style="color:\'FF0000\';font-size:20px;">Invalid card number</p>', unsafe_allow_html=True)
 
 	if name != "" and email != "" and cn != "" and pin != "" and loc != "":
 
