@@ -60,14 +60,14 @@ elif sect == "Booking":
 
 	st.write("Note: Events can only be booked during the current year.")
 
-	st.markdown(f'<h3 style="color:\'FF0000\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
+	st.markdown(f'<h3 style="color:\'#FF0000\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
 	
 
 	name = st.text_input(label="What's your name?", placeholder="Full Name - So I know what to call you")
 	email = st.text_input(label="What's your email?", placeholder="Email (name@company.extension) - for contact information")
 	
 	if "@" not in email:
-		st.markdown(f'<h3 style="color:\'FF0000\';font-size:20px;">Invalid email address</h3>', unsafe_allow_html=True)
+		st.markdown(f'<h4 style="color:\'#FF0000\';font-size:18px;">Invalid email address</h4>', unsafe_allow_html=True)
 	else:
 		cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
 	try:
@@ -75,7 +75,7 @@ elif sect == "Booking":
 		pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
 		loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
 	except:
-		st.markdown(f'<p style="color:\'FF0000\';font-size:15px;">Invalid card number</p>', unsafe_allow_html=True)
+		st.markdown(f'<h4 style="color:\'#FF0000\';font-size:18px;">Invalid card number</h4>', unsafe_allow_html=True)
 
 	if name != "" and email != "" and cn != "" and pin != "" and loc != "":
 
