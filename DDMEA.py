@@ -8,9 +8,9 @@ if sect == "Homepage":
 	st.markdown(f'<h2 style="color:#0066FF;font-size:25px;">"Your one-way ticket to the virtual music world!"</h2>', unsafe_allow_html=True)
 	st.write("Disco Dave’s MusEA is a service that provides YOU the best possible DJ service at parties, social gatherings, ceremonies, and clubs, all for a great price!")
 	st.write("Our party services include: smoke machines, multiple options of lighting such as par lights or strip lights, disco balls and rentable limosines for the party. We bring 4 LyxPro SPA-10 10\" Portable Professional PA Speakers with us for the best sound quality. Disco Dave also is well-versed in DiscoCity Pro’s many advanced features, and he uses that with the ElectroWorld X Series 9 DJ board to make every night one you won’t forget.")
-	st.header("A Word From Our Partner and Sponsor")
-	st.write("\"Lit buisiness, wish more services like these existed 🔥\" - Noisestorm")
-	st.write("\"Glad to partner up! Was a great investment on our end\" - Gameloft")
+	st.markdown(f'<h2 style="color:#0066FF;font-size:25px;">"A Word From Our Sponsor and Partner"</h2>', unsafe_allow_html=True)
+	st.write("\"Lit buisiness, wish more services like these existed 🔥\" - Noisestorm (Partner)")
+	st.write("\"Glad to partner up! Was a great investment on our end\" - Gameloft (Sponsor)")
 	st.header("")
 	st.image("Logo.PNG")
 
