@@ -63,11 +63,11 @@ elif sect == "Booking":
 	st.markdown(f'<h3 style="color:\'FF0000\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
 	
 
-	name = st.text_input(label="", placeholder="Full Name - So I know what to call you")
-	email = st.text_input(label="", placeholder="Email (name@company.extension) - for contact information")
-	cn = st.text_input(label="", placeholder="Credit/Debit Card Number - for the payment")
-	pin = st.text_input(label="", placeholder="PIN - for confirmation (this won't be saved)")
-	loc = st.text_input(label="", placeholder="Address - so I know where to be")
+	name = st.text_input(label="What's your name?", placeholder="Full Name - So I know what to call you")
+	email = st.text_input(label="What's your email?", placeholder="Email (name@company.extension) - for contact information")
+	cn = st.text_input(label="I'll need your card number for the payment", placeholder="Credit/Debit Card Number - for the payment")
+	pin = st.text_input(label="And your pin for confirmation", placeholder="PIN - for confirmation (this won't be saved)")
+	loc = st.text_input(label="Along with the adress", placeholder="Address - so I know where to be")
 
 	if name != "" and email != "" and cn != "" and pin != "" and loc != "":
 
