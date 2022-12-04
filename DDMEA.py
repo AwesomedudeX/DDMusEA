@@ -4,6 +4,7 @@ from datetime import datetime as dt
 sect = st.sidebar.selectbox("Navigate:", ["Homepage", "Products", "Booking", "About"])
 
 if sect == "Homepage":
+	st.write("Note: This website is not a real website, and was made for a school project. Don't worry about any information being stolen, as none will be saved.")
 	st.markdown(f'<h1 style="color:#FF0000;font-size:40px;">Disco Dave\'s MusEA</h1>', unsafe_allow_html=True)
 	st.markdown(f'<h2 style="color:#0066FF;font-size:25px;">"Your one-way ticket to the virtual music world!"</h2>', unsafe_allow_html=True)
 	st.write("Disco Dave’s MusEA is a service that provides YOU the best possible DJ service at parties, social gatherings, ceremonies, and clubs, all for a great price!")
@@ -61,13 +62,14 @@ elif sect == "Booking":
 
 	st.markdown(f'<h3 style="color:\'FF0000\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
 	
-	with st.form("Event Booking", clear_on_submit=True):
 
-		name = st.text_input(label="", placeholder="Full Name - So I know what to call you")
-		email = st.text_input(label="", placeholder="Email (name@company.extension) - for contact information")
-		cn = st.text_input(label="", placeholder="Credit/Debit Card Number - for the payment")
-		pin = st.text_input(label="", placeholder="PIN - for confirmation (this won't be saved)")
-		loc = st.text_input(label="", placeholder="Address - so I know where to be")
+	name = st.text_input(label="", placeholder="Full Name - So I know what to call you")
+	email = st.text_input(label="", placeholder="Email (name@company.extension) - for contact information")
+	cn = st.text_input(label="", placeholder="Credit/Debit Card Number - for the payment")
+	pin = st.text_input(label="", placeholder="PIN - for confirmation (this won't be saved)")
+	loc = st.text_input(label="", placeholder="Address - so I know where to be")
+
+	if name != "" and email != "" and cn != "" and pin != "" and loc != "":
 
 		t = st.selectbox("Type:", ["Party", "Wedding"])
 		
@@ -123,10 +125,10 @@ elif sect == "Booking":
 		elif t == "Wedding":
 			st.write(f"Wedding cost: ${150*dur}")
 
-		submit = st.form_submit_button("Book Event")
+		submit = st.button("Book Event")
 
-		if submit:
-			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{t} booked successfully!</h3>', unsafe_allow_html=True)
+	if submit:
+		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{t} booked successfully!</h3>', unsafe_allow_html=True)
 
 
 elif sect == "About":
