@@ -67,7 +67,7 @@ elif sect == "Booking":
 	email = st.text_input(label="What's your email?", placeholder="Email (name@company.extension) - for contact information")
 	
 	if "@" not in email:
-		st.markdown(f'<p style="color:\'FF0000\';font-size:20px;">Invalid email address</p>', unsafe_allow_html=True)
+		st.markdown(f'<h5 style="color:\'FF0000\';font-size:20px;">Invalid email address</h5>', unsafe_allow_html=True)
 	else:
 		cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
 	try:
