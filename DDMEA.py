@@ -71,12 +71,13 @@ elif sect == "Booking":
 	else:
 		cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
 		
-		try:
-			cn = int(cn)
-			pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
-			loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
-		except:
-			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number</h4>', unsafe_allow_html=True)
+		if cn != "":
+			try:
+				cn = int(cn)
+				pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
+				loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
+			except:
+				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number</h4>', unsafe_allow_html=True)
 
 	if name != "" and email != "" and cn != "" and pin != "" and loc != "":
 
