@@ -107,8 +107,8 @@ elif sect == "Booking":
 				pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
 				loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
 			except:
+				cn = str(cn)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number</h4>', unsafe_allow_html=True)
-
 	if name != "" and email != "" and cn != "" and pin != "" and loc != "":
 
 		t = st.selectbox("Type:", ["Party", "Wedding"])
