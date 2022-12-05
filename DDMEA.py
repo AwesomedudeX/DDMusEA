@@ -28,7 +28,7 @@ elif sect == "Products":
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Dave’s DJ SoundBoard: ElectroWorld X Series 9: $1000</h4>', unsafe_allow_html=True)
 	st.markdown(f'<h4 style="color:\'white\';font-size:18px;">DiscoCity Software: Use Promo Code \'DDMEA\' for a free trial month and a 50% discount on monthly payments for a year</h4>', unsafe_allow_html=True)
 
-	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "+1 Speaker at Your Next Party", "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)", "Limosine rentals", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
+	products = ["Karaoke Microphones", "Disco Balls", "Spotlights", "+1 Speaker at Your Next Party", "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)", "Limousine Rentals", "Dave’s DJ SoundBoard: ElectroWorld X Series 9"]
 	product = st.selectbox("Choose your product:", products)
 
 	if product == "+1 Speaker at Your Next Party" or product == "LyxPro SPA-10 10\" Portable Professional PA Speaker (Standalone)":
@@ -39,6 +39,7 @@ elif sect == "Products":
 		st.text_input(label="", placeholder="Address")
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+	
 	elif product == "Disco Balls":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Disco_Ball.png")
@@ -47,9 +48,37 @@ elif sect == "Products":
 		st.text_input(label="", placeholder="Address")
 		if st.button("Order🗒"):
 			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+	
 	elif product == "Dave’s DJ SoundBoard: ElectroWorld X Series 9":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Soundboard.png")
+		st.text_input(label="", placeholder="Credit/Debit Card Number")
+		st.text_input(label="", placeholder="PIN")
+		st.text_input(label="", placeholder="Address")
+		if st.button("Order🗒"):
+			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+	
+	elif product == "Karaoke Microphones":
+		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
+		st.image("Karaoke_Microphone.jpg")
+		st.text_input(label="", placeholder="Credit/Debit Card Number")
+		st.text_input(label="", placeholder="PIN")
+		st.text_input(label="", placeholder="Address")
+		if st.button("Order🗒"):
+			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+	
+	elif product == "Limousine Rentals":
+		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
+		st.image("Limousine.jpg")
+		st.text_input(label="", placeholder="Credit/Debit Card Number")
+		st.text_input(label="", placeholder="PIN")
+		st.text_input(label="", placeholder="Address")
+		if st.button("Order🗒"):
+			st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+	
+	elif product == "Spotlights":
+		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
+		st.image("Spotlight.jpg")
 		st.text_input(label="", placeholder="Credit/Debit Card Number")
 		st.text_input(label="", placeholder="PIN")
 		st.text_input(label="", placeholder="Address")
@@ -147,4 +176,5 @@ elif sect == "About":
 
 	st.markdown(f'<h1 style="color:#FF0000;font-size:40px;">About Dave:</h1>', unsafe_allow_html=True)
 	st.markdown(f'<h5 style="color:\'green\';font-size:17px;">Dave started out playing in a rock band in college and spent 3 years as a sound engineer before changing careers. He’s been a DJ for 4 years and creates all of his own music using only the newest modern software. You might’ve even seen Dave in places like the Fortnite World Cup. It was when he\'d just hit the turning point in his career 4 months ago when Dave surpassed all DJ services as the main DJ for huge celebrations. Dave’s also an on-time, cash upfront kind of guy, so he likes to be physically present at the right times to blast some beats that everyone’s probably gonna be vibin’ to for the next month at least. He really enjoys his current career and spends most of his time jamming out to the latest hits or just vibing to some nice beats. When he isn’t, he’s usually sleeping in his room with his dog, Bruno, or enjoying some game time while listening to his latest mixes. You can contact him at discodave@musea.ca.</h5>', unsafe_allow_html=True)
-	st.image("Dave_and_Bruno.jpg")
+	st.image("Dave_and_Bruno.jpg", caption="Dave and Bruno:")
+	st.image("Fortnite_World_Cup.jpg", caption="Fortnite World Cup")
