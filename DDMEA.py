@@ -179,5 +179,5 @@ elif sect == "About":
 
 	st.markdown(f'<h1 style="color:#FF0000;font-size:40px;">About Dave:</h1>', unsafe_allow_html=True)
 	st.markdown(f'<h5 style="color:\'green\';font-size:17px;">Dave started out playing in a rock band in college and spent 3 years as a sound engineer before changing careers. He’s been a DJ for 4 years and creates all of his own music using only the newest modern software. You might’ve even seen Dave in places like the Fortnite World Cup. It was when he\'d just hit the turning point in his career 4 months ago when Dave surpassed all DJ services as the main DJ for huge celebrations. Dave’s also an on-time, cash upfront kind of guy, so he likes to be physically present at the right times to blast some beats that everyone’s probably gonna be vibin’ to for the next month at least. He really enjoys his current career and spends most of his time jamming out to the latest hits or just vibing to some nice beats. When he isn’t, he’s usually sleeping in his room with his dog, Bruno, or enjoying some game time while listening to his latest mixes. You can contact him at discodave@musea.ca.</h5>', unsafe_allow_html=True)
-	st.image("Dave_and_Bruno.jpg", caption="Dave and Bruno:")
+	st.image("Dave_and_Bruno.jpg", caption="Dave and Bruno")
 	st.image("Fortnite_World_Cup.png", caption="Fortnite World Cup")
