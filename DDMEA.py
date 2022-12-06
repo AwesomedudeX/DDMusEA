@@ -148,9 +148,9 @@ elif sect == "Products":
 		address = st.text_input(label="", placeholder="Address")
 		if cn != "" and len(cn) > 8 and len(cn) < 14:
 
-			pin = st.text_input(label="", placeholder="PIN")
+				pin = st.text_input(label="", placeholder="PIN")
 
-			try:
+			#try:
 
 				cn = int(cn)
 				pin = int(pin)
@@ -159,7 +159,7 @@ elif sect == "Products":
 					if address != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
-			except:
+			#except:
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
