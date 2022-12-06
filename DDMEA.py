@@ -169,10 +169,9 @@ elif sect == "Booking":
 						st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{t} booked successfully!</h3>', unsafe_allow_html=True)
 						st.write("(Reselect this section in the navigation box to book another event)")
 			
-						
-						except:
-							cn = str(cn)
-							st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number</h4>', unsafe_allow_html=True)
+		except:
+			cn = str(cn)
+			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number</h4>', unsafe_allow_html=True)
 			
 elif sect == "About":
 
