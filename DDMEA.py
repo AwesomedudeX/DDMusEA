@@ -53,7 +53,7 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-		else:
+		elif cn != "" and pin != "":
 			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 	
 	elif product == "Disco Balls":
@@ -72,7 +72,7 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-		else:
+		elif cn != "" and pin != "":
 			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 			
 	elif product == "Dave’s DJ SoundBoard: ElectroWorld X Series 9":
@@ -91,7 +91,7 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-		else:
+		elif cn != "" and pin != "":
 			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 	
 	elif product == "Karaoke Microphones":
@@ -110,7 +110,7 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-		else:
+		elif cn != "" and pin != "":
 			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 
 	elif product == "Limousine Rentals":
@@ -129,7 +129,7 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-		else:
+		elif cn != "" and pin != "":
 			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 	
 	elif product == "Spotlights":
@@ -148,7 +148,7 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-		else:
+		elif cn != "" and pin != "":
 			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 
 elif sect == "Booking":
