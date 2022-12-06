@@ -166,7 +166,7 @@ elif sect == "Booking":
 			
 					if submit:
 						st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{t} booked successfully!</h3>', unsafe_allow_html=True)
-						st.write("(Reselect this section in the navigation box to book another event)")
+						st.write("(Reselect this section in the navigation box or change 1 or more options on this page to book another event)")
 			
 			except:
 				cn = str(cn)
