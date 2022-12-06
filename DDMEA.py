@@ -72,7 +72,9 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-			
+		elif cn != "" and pin != "":
+			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+
 	elif product == "Dave’s DJ SoundBoard: ElectroWorld X Series 9":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Soundboard.png")
