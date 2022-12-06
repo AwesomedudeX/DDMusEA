@@ -99,9 +99,11 @@ elif sect == "Booking":
 	if "@" not in email and email != "":
 		st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid email address</h4>', unsafe_allow_html=True)
 	else:
-		cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
 		
 		if cn != "" and email != "" and "@" in email:
+			
+			cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
+			
 			try:
 				cn = int(cn)
 				pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
