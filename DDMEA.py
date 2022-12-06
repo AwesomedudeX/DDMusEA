@@ -41,7 +41,6 @@ elif sect == "Products":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Speaker.png")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
-		loc = st.text_input(label="", placeholder="Address")
 		if cn != "":
 
 			pin = st.text_input(label="", placeholder="PIN")
@@ -52,6 +51,7 @@ elif sect == "Products":
 				pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
+					loc = st.text_input(label="", placeholder="Address")
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
@@ -75,6 +75,7 @@ elif sect == "Products":
 				pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
+					loc = st.text_input(label="", placeholder="Address")
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
@@ -98,6 +99,7 @@ elif sect == "Products":
 				pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
+					loc = st.text_input(label="", placeholder="Address")
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
@@ -121,6 +123,7 @@ elif sect == "Products":
 				pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
+					loc = st.text_input(label="", placeholder="Address")
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
@@ -144,6 +147,7 @@ elif sect == "Products":
 				pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
+					loc = st.text_input(label="", placeholder="Address")
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
@@ -167,6 +171,7 @@ elif sect == "Products":
 				pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
+					loc = st.text_input(label="", placeholder="Address")
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
