@@ -1,5 +1,8 @@
 import streamlit as st
+import warnings
 from datetime import datetime as dt
+
+warnings.filterwarnings("ignore")
 
 sect = st.sidebar.selectbox("Navigate:", ["Homepage", "Products", "Booking", "About"])
 
