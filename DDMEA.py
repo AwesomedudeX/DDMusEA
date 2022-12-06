@@ -5,9 +5,9 @@ from datetime import datetime as dt
 warnings.filterwarnings("ignore")
 
 sect = st.sidebar.selectbox("Navigate:", ["Homepage", "Products", "Booking", "About"])
-st.subheader("Viewing Notes:")
-st.write(" - Use the navigation box on the left sidebar to go to different parts of the webpage")
-st.write(" - Click on the 3 lines in the sidebar and click settings to change the theme of the page (light/dark mode)")
+st.sidebar.subheader("Viewing Notes:")
+st.sidebar.write(" - Use the navigation box on the left sidebar to go to different parts of the webpage")
+st.sidebar.write(" - Click on the 3 lines in the sidebar and click settings to change the theme of the page (light/dark mode)")
 
 if sect == "Homepage":
 	st.write("Note: This website is not a real website, and was made for a school project. Don't worry about any information being stolen, as none will be saved.")
