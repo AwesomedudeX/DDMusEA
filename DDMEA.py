@@ -87,7 +87,7 @@ elif sect == "Products":
 
 elif sect == "Booking":
 
-	st.write("Note: Events can only be booked during the current year.")
+	st.write("Note: Events can only be booked during the current year. Call +1 (800) 229-5923 to cancel or move booked slots.")
 
 	st.markdown(f'<h3 style="color:\'white\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
 	
