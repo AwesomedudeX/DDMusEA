@@ -149,10 +149,11 @@ elif sect == "Products":
 		address = st.text_input(label="", placeholder="Address")
 		if cn != "" and pin != "":
 			try:
-				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 
-					cn = int(cn)
-					pin = int(pin)
+				cn = int(cn)
+				pin = int(pin)
+
+				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 
 					if address != "":
 						if st.button("Order 🗒"):
