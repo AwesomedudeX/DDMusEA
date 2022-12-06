@@ -104,8 +104,11 @@ elif sect == "Booking":
 			try:
 				pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
 				cn = int(cn)
-				pin = int(pin)				
-				loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
+				
+				if pin != "":
+
+					pin = int(pin)				
+					loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
 			
 				if email != "" and cn != "" and pin != "" and loc != "":
 
