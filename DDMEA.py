@@ -90,9 +90,9 @@ elif sect == "Booking":
 	st.write("Note: Events can only be booked during the current year. Call +1 (800) 229-5923 to cancel or move booked slots.")
 
 	st.markdown(f'<h3 style="color:\'white\';font-size:20px;">Please enter the following information:</h3>', unsafe_allow_html=True)
-	
 
-	name = st.text_input(label="What's your name?", placeholder="Full Name - So I know what to call you")
+	name = st.text_input(label="What's your name?", placeholder="Full Name - So I know what to call you (optional)")
+	gen = st.text_input(label="How do you identify?", placeholder="Gender/Pronouns (optional)")
 	email = st.text_input(label="What's your email?", placeholder="Email (name@company.extension) - for contact information")
 	cn = ""
 
@@ -106,7 +106,7 @@ elif sect == "Booking":
 				pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
 				loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
 			
-				if name != "" and email != "" and cn != "" and pin != "" and loc != "":
+				if email != "" and cn != "" and pin != "" and loc != "":
 
 					t = st.selectbox("Type:", ["Party", "Wedding"])
 					
