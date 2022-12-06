@@ -170,7 +170,8 @@ elif sect == "Booking":
 		except:
 			cn = str(cn)
 			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number</h4>', unsafe_allow_html=True)
-	else:
+	
+	elif email != "":
 		st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid email address</h4>', unsafe_allow_html=True)
 
 elif sect == "About":
