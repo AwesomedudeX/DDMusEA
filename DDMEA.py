@@ -56,6 +56,9 @@ elif sect == "Products":
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+				else:
+					st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+
 			except:
 				cn = str(cn)
 				pin = str(pin)
@@ -80,6 +83,9 @@ elif sect == "Products":
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+				else:
+					st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+
 			except:
 				cn = str(cn)
 				pin = str(pin)
@@ -104,6 +110,9 @@ elif sect == "Products":
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+				else:
+					st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+
 			except:
 				cn = str(cn)
 				pin = str(pin)
@@ -128,6 +137,9 @@ elif sect == "Products":
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+				else:
+					st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+
 			except:
 				cn = str(cn)
 				pin = str(pin)
@@ -152,6 +164,9 @@ elif sect == "Products":
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+				else:
+					st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+
 			except:
 				cn = str(cn)
 				pin = str(pin)
@@ -176,6 +191,9 @@ elif sect == "Products":
 					if loc != "":
 						if st.button("Order 🗒"):
 							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
+				else:
+					st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+
 			except:
 				cn = str(cn)
 				pin = str(pin)
