@@ -64,7 +64,6 @@ elif sect == "Products":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Disco_Ball.png")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
-		loc = st.text_input(label="", placeholder="Address")
 		if cn != "":
 
 			pin = st.text_input(label="", placeholder="PIN")
@@ -88,7 +87,6 @@ elif sect == "Products":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Soundboard.png")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
-		loc = st.text_input(label="", placeholder="Address")
 		if cn != "":
 
 			pin = st.text_input(label="", placeholder="PIN")
@@ -112,7 +110,6 @@ elif sect == "Products":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Karaoke_Microphone.jpg")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
-		loc = st.text_input(label="", placeholder="Address")
 		if cn != "":
 
 			pin = st.text_input(label="", placeholder="PIN")
@@ -136,7 +133,6 @@ elif sect == "Products":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Limousine.jpg")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
-		loc = st.text_input(label="", placeholder="Address")
 		if cn != "":
 
 			pin = st.text_input(label="", placeholder="PIN")
@@ -160,7 +156,6 @@ elif sect == "Products":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Spotlight.jpg")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
-		loc = st.text_input(label="", placeholder="Address")
 		if cn != "":
 
 			pin = st.text_input(label="", placeholder="PIN")
