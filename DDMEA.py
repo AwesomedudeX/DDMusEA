@@ -1,5 +1,4 @@
 import streamlit as st
-import time
 from datetime import datetime as dt
 
 sect = st.sidebar.selectbox("Navigate:", ["Homepage", "Products", "Booking", "About"])
@@ -166,12 +165,8 @@ elif sect == "Booking":
 					submit = st.button("Book Event")
 			
 					if submit:
-
-						confirm = st.button("Confirm Booking")
-
-						if confirm:
-							st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{t} booked successfully!</h3>', unsafe_allow_html=True)
-							time.sleep(3)
+						st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{t} booked successfully!</h3>', unsafe_allow_html=True)
+						st.write("(Reselect this section in the navigation box to book another event)")
 			
 			except:
 				cn = str(cn)
