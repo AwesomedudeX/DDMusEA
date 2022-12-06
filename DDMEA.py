@@ -47,8 +47,9 @@ elif sect == "Products":
 
 			try:
 
-				cn = int(cn)
-				pin = int(pin)
+				if pin != "":
+					cn = int(cn)
+					pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 					loc = st.text_input(label="", placeholder="Address")
@@ -70,8 +71,9 @@ elif sect == "Products":
 
 			try:
 
-				cn = int(cn)
-				pin = int(pin)
+				if pin != "":
+					cn = int(cn)
+					pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 					loc = st.text_input(label="", placeholder="Address")
@@ -93,8 +95,9 @@ elif sect == "Products":
 
 			try:
 
-				cn = int(cn)
-				pin = int(pin)
+				if pin != "":
+					cn = int(cn)
+					pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 					loc = st.text_input(label="", placeholder="Address")
@@ -116,8 +119,9 @@ elif sect == "Products":
 
 			try:
 
-				cn = int(cn)
-				pin = int(pin)
+				if pin != "":
+					cn = int(cn)
+					pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 					loc = st.text_input(label="", placeholder="Address")
@@ -139,8 +143,9 @@ elif sect == "Products":
 
 			try:
 
-				cn = int(cn)
-				pin = int(pin)
+				if pin != "":
+					cn = int(cn)
+					pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 					loc = st.text_input(label="", placeholder="Address")
@@ -162,8 +167,9 @@ elif sect == "Products":
 
 			try:
 
-				cn = int(cn)
-				pin = int(pin)
+				if pin != "":
+					cn = int(cn)
+					pin = int(pin)
 
 				if len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 					loc = st.text_input(label="", placeholder="Address")
