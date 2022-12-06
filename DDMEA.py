@@ -96,12 +96,10 @@ elif sect == "Booking":
 	email = st.text_input(label="What's your email?", placeholder="Email (name@company.extension) - for contact information")
 	cn = ""
 
-	if "@" not in email and email != "":
-		st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid email address</h4>', unsafe_allow_html=True)
-	else:
-			
+	if "@" in email and email != "":
+		
 		cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
-			
+		
 		try:
 			cn = int(cn)
 			pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
@@ -172,7 +170,9 @@ elif sect == "Booking":
 		except:
 			cn = str(cn)
 			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number</h4>', unsafe_allow_html=True)
-			
+	else:
+		st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid email address</h4>', unsafe_allow_html=True)
+
 elif sect == "About":
 
 	st.markdown(f'<h1 style="color:#FF0000;font-size:40px;">About Dave:</h1>', unsafe_allow_html=True)
