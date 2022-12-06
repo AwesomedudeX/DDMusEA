@@ -161,7 +161,7 @@ elif sect == "Booking":
 				pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
 				cn = int(cn)
 				
-				if pin != "" and len(str(pin)) > 2 and len(str(pin)) < 7:
+				if pin != "" and len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 
 					pin = int(pin)				
 					loc = st.text_input(label="Address:", placeholder="Address - so I know where to be")
