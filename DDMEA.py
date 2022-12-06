@@ -101,7 +101,7 @@ elif sect == "Booking":
 	else:
 		cn = st.text_input(label="Card Number:", placeholder="Credit/Debit Card Number - for the payment")
 		
-		if cn != "":
+		if cn != "" and email != "" and "@" in email:
 			try:
 				cn = int(cn)
 				pin = st.text_input(label="PIN:", placeholder="PIN - for confirmation (this won't be saved)")
