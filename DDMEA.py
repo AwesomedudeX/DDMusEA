@@ -43,7 +43,7 @@ elif sect == "Products":
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
 		pin = st.text_input(label="", placeholder="PIN")
 		address = st.text_input(label="", placeholder="Address")
-		if cn != "" and pin != "" and address != "":
+		if cn != "" and pin != "" and address != "" and len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 			try:
 				cn = int(cn)
 				pin = int(pin)
@@ -53,15 +53,16 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-
-				
+		else:
+			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+	
 	elif product == "Disco Balls":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Disco_Ball.png")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
 		pin = st.text_input(label="", placeholder="PIN")
 		address = st.text_input(label="", placeholder="Address")
-		if cn != "" and pin != "" and address != "":
+		if cn != "" and pin != "" and address != "" and len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 			try:
 				cn = int(cn)
 				pin = int(pin)
@@ -71,15 +72,16 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-
-	
+		else:
+			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+			
 	elif product == "Dave’s DJ SoundBoard: ElectroWorld X Series 9":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Soundboard.png")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
 		pin = st.text_input(label="", placeholder="PIN")
 		address = st.text_input(label="", placeholder="Address")
-		if cn != "" and pin != "" and address != "":
+		if cn != "" and pin != "" and address != "" and len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 			try:
 				cn = int(cn)
 				pin = int(pin)
@@ -89,6 +91,8 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+		else:
+			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 	
 	elif product == "Karaoke Microphones":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
@@ -96,7 +100,7 @@ elif sect == "Products":
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
 		pin = st.text_input(label="", placeholder="PIN")
 		address = st.text_input(label="", placeholder="Address")
-		if cn != "" and pin != "" and address != "":
+		if cn != "" and pin != "" and address != "" and len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 			try:
 				cn = int(cn)
 				pin = int(pin)
@@ -106,14 +110,16 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
-	
+		else:
+			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+
 	elif product == "Limousine Rentals":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
 		st.image("Limousine.jpg")
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
 		pin = st.text_input(label="", placeholder="PIN")
 		address = st.text_input(label="", placeholder="Address")
-		if cn != "" and pin != "" and address != "":
+		if cn != "" and pin != "" and address != "" and len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 			try:
 				cn = int(cn)
 				pin = int(pin)
@@ -123,6 +129,8 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+		else:
+			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 	
 	elif product == "Spotlights":
 		st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">{product}</h3>', unsafe_allow_html=True)
@@ -130,7 +138,7 @@ elif sect == "Products":
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
 		pin = st.text_input(label="", placeholder="PIN")
 		address = st.text_input(label="", placeholder="Address")
-		if cn != "" and pin != "" and address != "":
+		if cn != "" and pin != "" and address != "" and len(str(pin)) > 2 and len(str(pin)) < 7 and len(str(cn)) > 8 and len(str(cn)) < 14:
 			try:
 				cn = int(cn)
 				pin = int(pin)
@@ -140,6 +148,8 @@ elif sect == "Products":
 				cn = str(cn)
 				pin = str(pin)
 				st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
+		else:
+			st.markdown(f'<h4 style="color:\'white\';font-size:18px;">Invalid card number/PIN</h4>', unsafe_allow_html=True)
 
 elif sect == "Booking":
 
