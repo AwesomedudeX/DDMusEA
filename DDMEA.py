@@ -43,7 +43,7 @@ elif sect == "Products":
 		cn = st.text_input(label="", placeholder="Credit/Debit Card Number")
 		pin = st.text_input(label="", placeholder="PIN")
 		address = st.text_input(label="", placeholder="Address")
-		if cn != ""
+		if cn != "":
 
 			pin = st.text_input(label="", placeholder="PIN")
 
