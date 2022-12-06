@@ -41,7 +41,7 @@ elif sect == "Products":
 			try:
 				cn = int(cn)
 				pin = int(pin)
-				if st.button("Order🗒"):
+				if st.button("Order 🗒"):
 					st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 			except:
 				cn = str(cn)
@@ -59,7 +59,7 @@ elif sect == "Products":
 			try:
 				cn = int(cn)
 				pin = int(pin)
-				if st.button("Order🗒"):
+				if st.button("Order 🗒"):
 					st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 			except:
 				cn = str(cn)
@@ -77,7 +77,7 @@ elif sect == "Products":
 			try:
 				cn = int(cn)
 				pin = int(pin)
-				if st.button("Order🗒"):
+				if st.button("Order 🗒"):
 					st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 			except:
 				cn = str(cn)
@@ -94,7 +94,7 @@ elif sect == "Products":
 			try:
 				cn = int(cn)
 				pin = int(pin)
-				if st.button("Order🗒"):
+				if st.button("Order 🗒"):
 					st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 			except:
 				cn = str(cn)
@@ -111,7 +111,7 @@ elif sect == "Products":
 			try:
 				cn = int(cn)
 				pin = int(pin)
-				if st.button("Order🗒"):
+				if st.button("Order 🗒"):
 					st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 			except:
 				cn = str(cn)
@@ -128,7 +128,7 @@ elif sect == "Products":
 			try:
 				cn = int(cn)
 				pin = int(pin)
-				if st.button("Order🗒"):
+				if st.button("Order 🗒"):
 					st.markdown(f'<h3 style="color:\'0055FF\';font-size:20px;">Your purchase has been completed!</h3>', unsafe_allow_html=True)
 			except:
 				cn = str(cn)
